@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  color: #3575e2;
+}
+.nav-parent:has(> .isActive) {
+  color: white;
+  background-color: #3575e2;
+  width: 120px;
+}
