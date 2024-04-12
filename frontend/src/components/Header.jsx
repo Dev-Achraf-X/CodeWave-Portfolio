@@ -22,7 +22,7 @@ function Header() {
       <nav
         className={`fixed  left-0 right-0 z-10 ${
           scroll ? "bg-white top-0 shadow-md" : "top-4"
-        } border-gray-200 max-w-[1200px] mx-auto px-4 lg:px-6 py-6 dark:bg-gray-800`}
+        } border-gray-200 max-w-full mx-auto px-4 lg:px-6 py-6 dark:bg-gray-800`}
       >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl relative">
           <Link to="/" className="flex items-center">

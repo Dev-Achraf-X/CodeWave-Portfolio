@@ -2,6 +2,7 @@ import React from "react";
 import Typewriter from "../libs/Typewriter";
 import CardCPN from "../components/CardCPN";
 import { motion } from "framer-motion";
+import { ProjectData } from "../../public/data/ProjectData";
 // import Pagination from "../libs/Pagination";
 
 function ProjectsPage() {
@@ -21,36 +22,14 @@ function ProjectsPage() {
         className="max-w-[1200px] mt-[16rem] mx-auto"
       >
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 justify-items-center mt-8 gap-5">
-          <CardCPN
-            title="Traveler Website"
-            img="https://i.pinimg.com/originals/d2/d7/5a/d2d75a965b13526fccba23c44d858b7e.png"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Portfolio Website"
-            img="https://miro.medium.com/v2/resize:fit:1358/0*ww3YQrY7x5aIWRv0"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Medical Website"
-            img="https://htmlcodex.com/wp-content/uploads/2021/05/hospital-website-template.jpg"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Traveler Website"
-            img="https://i.pinimg.com/originals/d2/d7/5a/d2d75a965b13526fccba23c44d858b7e.png"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Portfolio Website"
-            img="https://miro.medium.com/v2/resize:fit:1358/0*ww3YQrY7x5aIWRv0"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Medical Website"
-            img="https://htmlcodex.com/wp-content/uploads/2021/05/hospital-website-template.jpg"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
+          {ProjectData.map((item) => (
+            <CardCPN
+              key={item.id}
+              title={item.title}
+              img={item.img}
+              desc={item.desc}
+            />
+          ))}
         </div>
         {/* <div className="flex mt-10 justify-center">
           <Pagination />

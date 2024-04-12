@@ -43,6 +43,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+::selection{
+  background-color: rgb(250, 230, 175);
+  color: #000;
+}
+
 .swiper-pagination-bullet {
   background: #3575e2;
   width: 12px;

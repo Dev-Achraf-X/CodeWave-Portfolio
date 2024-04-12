@@ -8,8 +8,12 @@ import TestoSlider from "../components/TestoSlider";
 import { Link } from "react-router-dom";
 import CardCPN from "../components/CardCPN";
 import Work2gCPN from "../components/Work2gCPN";
+import { ServiceData } from "../../public/data/ServiceData";
+import { ProjectData } from "../../public/data/ProjectData";
 
 function HomePage() {
+  const showService = ServiceData.slice(0, 3);
+  const showProject = ProjectData.slice(0, 3);
   return (
     <div>
       <Typewriter
@@ -23,24 +27,14 @@ function HomePage() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <ServiceCard
-          title="Financial Analysis"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={true}
-        />
-        <ServiceCard
-          title="Marketing Plans"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="false"
-          showLink={true}
-        />
-        <ServiceCard
-          title="Optimize Solutions"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={true}
-        />
+        {showService.map((item) => (
+          <ServiceCard
+            key={item.id}
+            title={item.title}
+            desc={item.desc}
+            hover={item.hover}
+          />
+        ))}
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.7 }}
@@ -70,7 +64,7 @@ function HomePage() {
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="max-w-[1200px] mx-auto"
+        className="max-w-[1200px] md:mt-[16rem] mt-[8rem] mx-auto"
       >
         <div className="flex items-center justify-between">
           <TitleCPN title={"Projects"} />
@@ -82,21 +76,14 @@ function HomePage() {
           </Link>
         </div>
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 justify-items-center mt-8 gap-5">
-          <CardCPN
-            title="Traveler Website"
-            img="https://i.pinimg.com/originals/d2/d7/5a/d2d75a965b13526fccba23c44d858b7e.png"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Portfolio Website"
-            img="https://miro.medium.com/v2/resize:fit:1358/0*ww3YQrY7x5aIWRv0"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
-          <CardCPN
-            title="Medical Website"
-            img="https://htmlcodex.com/wp-content/uploads/2021/05/hospital-website-template.jpg"
-            desc="Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order."
-          />
+          {showProject.map((item) => (
+            <CardCPN
+            key={item.id}
+              title={item.title}
+              img={item.img}
+              desc={item.desc}
+            />
+          ))}
         </div>
       </motion.div>
       <Work2gCPN />

@@ -5,6 +5,7 @@ import ServiceCard from "../components/ServiceCard";
 import TestoSlider from "../components/TestoSlider";
 import TitleCPN from "../components/TitleCPN";
 import Work2gCPN from "../components/Work2gCPN";
+import { ServiceData } from "../../public/data/ServiceData";
 
 function ServicesPage() {
   return (
@@ -21,42 +22,14 @@ function ServicesPage() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <ServiceCard
-          title="Financial Analysis"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={false}
-        />
-        <ServiceCard
-          title="Marketing Plans"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="false"
-          showLink={false}
-        />
-        <ServiceCard
-          title="Optimize Solutions"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={false}
-        />
-        <ServiceCard
-          title="Financial Analysis"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={false}
-        />
-        <ServiceCard
-          title="Marketing Plans"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={false}
-        />
-        <ServiceCard
-          title="Optimize Solutions"
-          desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed!"
-          hover="true"
-          showLink={false}
-        />
+        {ServiceData.map((item) => (
+          <ServiceCard
+            key={item.id}
+            title={item.title}
+            desc={item.desc}
+            hover={item.hover}
+          />
+        ))}
       </motion.div>
       <motion.div
         initial={{ opacity: 0, scale: 0.7 }}
