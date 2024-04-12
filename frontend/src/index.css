@@ -10,3 +10,41 @@
   background-color: #3575e2;
   width: 120px;
 }
+
+.half-bg::before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  content: "";
+  right: 0;
+  background-color: #fff6da;
+}
+.half-bg3::before {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  content: "";
+  left: 0;
+  background-color: #fff6da;
+  z-index: -1;
+}
+
+.half-bg2::before {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  content: "";
+  left: 0;
+  background-color: #fff6da;
+  z-index: -1;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background: #3575e2;
+  width: 12px;
+  height: 12px;
+}

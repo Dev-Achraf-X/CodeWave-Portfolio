@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function TitleCPN() {
+function TitleCPN({ title }) {
   return (
-    <div>TitleCPN</div>
-  )
+    <div className="text-4xl font-semibold text-primary-600 ">{title}</div>
+  );
 }
 
-export default TitleCPN
+export default TitleCPN;

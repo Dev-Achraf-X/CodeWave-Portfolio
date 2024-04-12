@@ -1,16 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import HeaderLinks from "../libs/HeaderLinks";
 import SmHaderLinks from "../libs/SmHaderLinks";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
   const handleShowMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 10);
+    });
+  });
+
   return (
     <header>
-      <nav className="bg-transparent border-gray-200 max-w-[1200px] mx-auto px-4 lg:px-6 py-6 dark:bg-gray-800">
+      <nav
+        className={`fixed  left-0 right-0 z-10 ${
+          scroll ? "bg-white top-0 shadow-md" : "top-4"
+        } border-gray-200 max-w-[1200px] mx-auto px-4 lg:px-6 py-6 dark:bg-gray-800`}
+      >
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl relative">
           <Link to="/" className="flex items-center">
             {/* <img
@@ -64,7 +77,7 @@ function Header() {
           >
             <HeaderLinks />
           </div>
-          {showMenu ? <SmHaderLinks /> : null}
+          {showMenu ? <SmHaderLinks handleShowMenu={handleShowMenu} /> : null}
         </div>
       </nav>
     </header>

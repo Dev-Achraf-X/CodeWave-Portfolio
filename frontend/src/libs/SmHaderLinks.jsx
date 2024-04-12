@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function SmHaderLinks() {
+function SmHaderLinks({ handleShowMenu }) {
   return (
-    <ul className="flex flex-col gap-5 mt-4 font-light text-lg lg:hidden absolute top-0 right-12">
+    <ul className="flex bg-white p-5 flex-col gap-5 mt-4 font-light text-lg lg:hidden absolute top-0 right-10 rounded">
       <li
         className=" text-black rounded px-3 py-2  nav-parent cursor-pointer  dark:text-white"
         aria-current="page"
@@ -12,6 +12,7 @@ function SmHaderLinks() {
           to="/"
           aria-current="page"
           className={({ isActive }) => (isActive ? "isActive" : "")}
+          onClick={handleShowMenu}
         >
           Home
         </NavLink>
@@ -20,6 +21,7 @@ function SmHaderLinks() {
         <NavLink
           to="/about"
           className={({ isActive }) => (isActive ? "isActive" : "")}
+          onClick={handleShowMenu}
         >
           About me
         </NavLink>
@@ -28,6 +30,7 @@ function SmHaderLinks() {
         <NavLink
           to="/services"
           className={({ isActive }) => (isActive ? "isActive" : "")}
+          onClick={handleShowMenu}
         >
           My services
         </NavLink>
@@ -36,6 +39,7 @@ function SmHaderLinks() {
         <NavLink
           to="/projects"
           className={({ isActive }) => (isActive ? "isActive" : "")}
+          onClick={handleShowMenu}
         >
           My projects
         </NavLink>
@@ -44,6 +48,7 @@ function SmHaderLinks() {
         <NavLink
           to="/contact"
           className={({ isActive }) => (isActive ? "isActive" : "")}
+          onClick={handleShowMenu}
         >
           Contact me
         </NavLink>
