@@ -15,7 +15,7 @@ function Typewriter({ isTyping, title, link, linkTitle }) {
           typeSpeed={100}
           backSpeed={20}
           loop
-          className="lg:text-[55px] text-5xl text-primary-600 font-bold absolute right-[50%] top-[50%] translate-x-2/4 -translate-y-3/4"
+          className="lg:text-[55px] sm:text-5xl text-3xl text-primary-600 font-bold absolute right-[50%] top-[50%] translate-x-2/4 -translate-y-3/4"
         />
       ) : (
         <h1 className="lg:text-[55px] text-5xl text-primary-600 font-bold absolute right-[50%] top-[50%] translate-x-2/4 -translate-y-3/4">
@@ -24,7 +24,7 @@ function Typewriter({ isTyping, title, link, linkTitle }) {
       )}
       <Link
         to={link}
-        className="absolute xl:left-[40%] md:left-[20%] left-[10%] top-[70%] lg:text-xl text-[13px] text-primary-600 font-bold underline underline-offset-8"
+        className="absolute xl:left-[40%] md:left-[20%] left-[10%] top-[70%] lg:text-xl text-[10px] text-primary-600 font-bold underline underline-offset-8"
       >
         {linkTitle}
       </Link>
