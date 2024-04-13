@@ -9,7 +9,7 @@ function Footer() {
             <a href="/" className="flex items-center">
               {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" /> */}
               <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">
-                ArtDev
+                CodeWave  
               </span>
             </a>
           </div>
@@ -21,7 +21,7 @@ function Footer() {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="https://flowbite.com/" className="hover:underline">
-                    ArtDev
+                    CodeWave
                   </a>
                 </li>
                 <li>

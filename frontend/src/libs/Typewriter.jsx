@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 function Typewriter({ isTyping, title, link, linkTitle }) {
   return (
-    <div className="w-full h-[75vh] mb-12 relative half-bg">
+    <div className="w-full h-[45rem] mb-12 relative half-bg">
       {isTyping ? (
         <ReactTyped
           strings={[
@@ -18,13 +18,13 @@ function Typewriter({ isTyping, title, link, linkTitle }) {
           className="lg:text-[55px] text-5xl text-primary-600 font-bold absolute right-[50%] top-[50%] translate-x-2/4 -translate-y-3/4"
         />
       ) : (
-        <h1 className="lg:text-[55px] text-5xl text-primary-600 font-bold absolute md:left-[20%] left-[-20%] top-[50%] translate-x-2/4 -translate-y-3/4">
+        <h1 className="lg:text-[55px] text-5xl text-primary-600 font-bold absolute right-[50%] top-[50%] translate-x-2/4 -translate-y-3/4">
           {title}
         </h1>
       )}
       <Link
         to={link}
-        className="absolute right-[65%] top-[70%] lg:text-xl text-[13px] text-primary-600 font-bold underline underline-offset-8"
+        className="absolute xl:left-[40%] md:left-[20%] left-[10%] top-[70%] lg:text-xl text-[13px] text-primary-600 font-bold underline underline-offset-8"
       >
         {linkTitle}
       </Link>

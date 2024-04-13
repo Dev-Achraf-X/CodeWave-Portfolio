@@ -32,7 +32,7 @@ function Header() {
               alt="Flowbite Logo"
             /> */}
             <span className="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">
-              Art<span className="text-4xl text-[#3575E2]">Dev</span>
+              Code<span className="text-4xl text-[#3575E2]">Wave</span>
             </span>
           </Link>
           <div className="flex items-center lg:order-2 lg:hidden">

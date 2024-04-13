@@ -17,7 +17,7 @@ function ServicesPage() {
         linkTitle={"GET IN TOUCH"}
       />
       <motion.div
-        className="max-w-[1200px]  mx-auto mt-[15rem] grid grid-cols-3 gap-5"
+        className="max-w-[1200px]  mx-auto mt-[15rem] grid lg:grid-cols-3 sm:grid-cols-2 gap-5"
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -42,7 +42,7 @@ function ServicesPage() {
           <TestoSlider />
         </div>
       </motion.div>
-      <Work2gCPN />
+      <Work2gCPN isService={false} />
     </div>
   );
 }

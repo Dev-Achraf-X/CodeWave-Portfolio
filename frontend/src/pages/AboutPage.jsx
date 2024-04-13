@@ -27,7 +27,7 @@ function AboutPage() {
           <TestoSlider />
         </div>
       </motion.div>
-      <Work2gCPN />
+      <Work2gCPN isService={true} />
     </div>
   );
 }

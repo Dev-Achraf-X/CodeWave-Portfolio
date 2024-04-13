@@ -22,7 +22,7 @@ function HomePage() {
         linkTitle={"VIEW MY SERVICES"}
       />
       <motion.div
-        className="max-w-[1200px] h-[78vh]  mx-auto my-16 flex flex-col justify-around lg:flex-row items-center gap-5"
+        className="max-w-[1200px]   mx-auto my-[16rem] grid lg:grid-cols-3 sm:grid-cols-2 gap-5"
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
@@ -40,7 +40,7 @@ function HomePage() {
         initial={{ opacity: 0, scale: 0.7 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="max-w-[1200px] h-[75vh] mx-auto half-bg2"
+        className="max-w-[1200px] h-[45rem] mx-auto half-bg2"
       >
         <div className="w-full py-24">
           <TitleCPN title="My Features" />
@@ -78,7 +78,7 @@ function HomePage() {
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 justify-items-center mt-8 gap-5">
           {showProject.map((item) => (
             <CardCPN
-            key={item.id}
+              key={item.id}
               title={item.title}
               img={item.img}
               desc={item.desc}
@@ -86,7 +86,7 @@ function HomePage() {
           ))}
         </div>
       </motion.div>
-      <Work2gCPN />
+      <Work2gCPN isService={true} />
     </div>
   );
 }

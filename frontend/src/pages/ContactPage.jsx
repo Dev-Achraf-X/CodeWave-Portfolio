@@ -10,8 +10,8 @@ function ContactPage() {
         linkTitle={"LEARN MORE"}
         title={"Contact Me."}
       />
-      <div className="w-full h-[75vh] relative half-bg3 items-center grid md:grid-cols-2">
-        <form className=" mx-auto">
+      <div className="max-w-[1200px] h-[45rem] mx-auto relative  half-bg3 items-center grid lg:grid-cols-2 justify-center">
+        <form className="mx-auto">
           <div className="grid grid-cols-2 gap-3">
             <div className="mb-5">
               <label
@@ -80,19 +80,27 @@ function ContactPage() {
             Send Message
           </button>
         </form>
-        <div className="px-6" >
-          <h1 className="md:text-5xl text-3xl font-semibold text-primary-500">My Contact Info</h1>
+        <div className="px-6">
+          <h1 className="md:text-5xl text-3xl font-semibold text-primary-500">
+            My Contact Info
+          </h1>
           <div className="mt-10">
             <span className="text-xl font-medium">Adress: </span>
-            <span className="text-lg font-light text-gray-700">34 Street Name, City Name Here, United States</span>
+            <span className="text-lg font-light text-gray-700">
+              34 Street Name, City Name Here, United States
+            </span>
           </div>
           <div className="mt-5">
             <span className="text-xl font-medium">Phone: </span>
-            <span className="text-lg font-light text-gray-700">+1 242 4942 290</span>
+            <span className="text-lg font-light text-gray-700">
+              +1 242 4942 290
+            </span>
           </div>
           <div className="mt-5">
             <span className="text-xl font-medium">Email: </span>
-            <span className="text-lg font-light text-gray-700">info@yourdomain.com</span>
+            <span className="text-lg font-light text-gray-700">
+              info@yourdomain.com
+            </span>
           </div>
         </div>
       </div>
