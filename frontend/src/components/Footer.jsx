@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,12 +7,12 @@ function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="/" className="flex items-center">
-              {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 me-3" alt="FlowBite Logo" /> */}
+            <Link to="/" className="flex items-center">
+              <img src="/codewave2.png" className="h-8 me-3" alt="CodeWave Logo" />
               <span className="self-center text-4xl font-semibold whitespace-nowrap dark:text-white">
                 CodeWave  
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -20,17 +21,17 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  <Link to="/" className="hover:underline">
                     CodeWave
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to="/"
                     className="hover:underline"
                   >
                     Achraf
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -40,7 +41,7 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://github.com" className="hover:underline ">
+                  <a href="https://github.com/Dev-Achraf-X" className="hover:underline ">
                     Github
                   </a>
                 </li>
@@ -57,9 +58,9 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link to="/contact" className="hover:underline">
                     Contact me
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:underline">
