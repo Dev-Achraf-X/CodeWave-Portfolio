@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 function Typewriter({ isTyping, title, link, linkTitle }) {
   return (
-    <div className="w-full h-[45rem] mb-12 relative half-bg">
+    <div className="w-full h-[38rem] mb-12 relative half-bg">
       {isTyping ? (
         <ReactTyped
           strings={[
